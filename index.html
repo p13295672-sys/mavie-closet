@@ -256,6 +256,7 @@ var P=[
   else if(/Polo/i.test(x.n)) x.c="Camisetas polo";
   else if(/Risca de Giz/i.test(x.n)) x.c="Camisetas listradas";
   else x.c="Camisetas";
+  if(/^Camiseta masculina Essentials/i.test(x.n)) x.c="Masculino";
   return x;
 });
 var SIZES=["P","M","G"],sel={},bag=(function(){try{return JSON.parse(localStorage.getItem("mavieBag")||"[]")}catch(e){return []}})(),cat="Todas";
