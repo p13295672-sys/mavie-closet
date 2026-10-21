@@ -269,7 +269,7 @@ document.querySelectorAll("[data-wa]").forEach(function(a){a.href="https://wa.me
 $("ig").href=CFG.ig;
 
 function chips(){
-  var cs=["Todas"].concat(P.map(function(x){return x.c}).filter(function(v,i,a){return a.indexOf(v)===i}));
+  var cs=["Todas"].concat(P.map(function(x){return x.c}).filter(function(v,i,a){return a.indexOf(v)===i&&v!=="Masculino"}));
   $("chips").innerHTML=cs.map(function(c){return '<button class="chip" role="tab" aria-selected="'+(c===cat)+'" tabindex="'+(c===cat?'0':'-1')+'" data-c="'+c+'">'+c+'</button>'}).join("");
 }
 function grid(){
